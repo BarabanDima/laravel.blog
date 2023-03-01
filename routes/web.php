@@ -20,4 +20,5 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function() {
     Route::get('/', 'Admin\MainController@index')->name('admin.index');
     Route::resource('/categories', 'Admin\CategoryController');
+    Route::resource('/tags', 'Admin\TagController');
 });

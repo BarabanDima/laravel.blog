@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreCategory;
-use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreTag;
 
-class CategoryController extends Controller
+
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(20);
-        return view('admin.categories.index', compact('categories'));
+        $tags = Tag::paginate(20);
+        return view('admin.tags.index', compact('tags'));
     }
 
     /**
@@ -27,7 +28,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.categories.create');
+        return view('admin.tags.create');
     }
 
     /**
@@ -36,11 +37,13 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCategory $request)
+    public function store(Request $request)
     {
-        Category::create($request->all());
-        // $request->session()->flash('success', 'Категория добавлена');
-        return redirect()->route('categories.index')->with('success', 'Категория добавлена');
+        $request->validate( [
+            'title' => 'required',
+        ]);
+        Tag::create($request->all());
+        return redirect()->route('tags.index')->with('success', 'Тег добавлен');
     }
 
     /**
@@ -51,8 +54,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
-        return view('admin.categories.edit', compact('category'));
+        $tag = Tag::find($id);
+        return view('admin.tags.edit', compact('tag'));
     }
 
     /**
@@ -67,9 +70,9 @@ class CategoryController extends Controller
         $request->validate([
             'title' => 'required',
         ]);
-        $category = Category::find($id);
-        $category->update($request->all());
-        return redirect()->route('categories.index')->with('success', 'Изменения сохранены');
+        $tag = Tag::find($id);
+        $tag->update($request->all());
+        return redirect()->route('tags.index')->with('success', 'Изменения сохранены');
     }
 
     /**
@@ -80,9 +83,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        // $category = Category::find($id);
-        // $category->delete();
-        Category::destroy($id);
-        return redirect()->route('categories.index')->with('success', 'Категория удалена');
+        Tag::destroy($id);
+        return redirect()->route('tags.index')->with('success', 'Тег удален');
     }
 }
