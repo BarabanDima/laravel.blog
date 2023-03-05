@@ -15,13 +15,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::prefix('admin')->group(function() {
-    Route::get('/', 'Admin\MainController@index')->name('admin.index');
-    Route::resource('/categories', 'Admin\CategoryController');
-    Route::resource('/tags', 'Admin\TagController');
-    Route::resource('/posts', 'Admin\PostController');
+    Route::get('/', 'Admin\MainController@index')->name('admin.index')->middleware('admin');
+    Route::resource('/categories', 'Admin\CategoryController')->middleware('admin');
+    Route::resource('/tags', 'Admin\TagController')->middleware('admin');
+    Route::resource('/posts', 'Admin\PostController')->middleware('admin');
 });
 
-Route::get('/register', 'UserController@create ')->name('register.create');
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/register', 'UserController@create')->name('register.create');
+    Route::post('/register', 'UserController@store')->name('register.store');
+    Route::get('/login', 'UserController@loginForm')->name('login.create');
+    Route::post('/login', 'UserController@login')->name('login');
+});
+
+Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
