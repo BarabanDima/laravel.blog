@@ -23,3 +23,5 @@ Route::prefix('admin')->group(function() {
     Route::resource('/tags', 'Admin\TagController');
     Route::resource('/posts', 'Admin\PostController');
 });
+
+Route::get('/register', 'UserController@create ')->name('register.create');
