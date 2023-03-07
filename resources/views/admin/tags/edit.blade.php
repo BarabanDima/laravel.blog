@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active">Теги</li>
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Blank Page</li>
                     </ol>
                 </div>
             </div>
@@ -35,7 +35,8 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="title">Название</label>
-                                    <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" id="title"
+                                    <input type="text" name="title"
+                                        class="form-control @error('title') is-invalid @enderror" id="title"
                                         value="{{ $tag->title }}">
                                 </div>
                             </div>

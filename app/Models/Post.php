@@ -49,7 +49,8 @@ class Post extends Model
         if (!$this->thumbnail) {
             return asset("no-image.png");
         }
-        return asset("uploads/{$this->thumbnail}");
+        return asset("/public/uploads/{$this->thumbnail}");
     }
 
 }
+

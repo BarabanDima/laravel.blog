@@ -66,10 +66,12 @@
 
                                 <div class="form-group">
                                     <label for="tags">Теги</label>
-                                    <select name="tags[]" id="tags" class="select2" multiple="multiple"
+                                    <select name="tags" id="tags" class="select2" multiple="multiple"
                                         data-placeholder="Выбор тегов" style="width: 100%;">
                                         @foreach ($tags as $k => $v)
-                                            <option value="{{ $k }}" @if (in_array($k, $post->tags->pluck('id')->all())) selected @endif>>{{ $v }}</option>
+                                            <option value="{{ $k }}"
+                                                @if (in_array($k, $post->tags->pluck('id')->all())) selected @endif>{{ $v }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -82,6 +84,8 @@
                                             <label class="custom-file-label" for="thumbnail">Choose file</label>
                                         </div>
                                     </div>
+                                    <div><img src="{{ $post->getImage() }}" alt="" class="img-thumbnail mt-2"
+                                            width="200"></div>
                                 </div>
                             </div>
                             <!-- /.card-body -->

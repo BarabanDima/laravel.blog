@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'PostController@index')->name('home');
+Route::get('/article', 'PostController@show')->name('posts.single');
 
 Route::prefix('admin')->group(function() {
     Route::get('/', 'Admin\MainController@index')->name('admin.index')->middleware('admin');
