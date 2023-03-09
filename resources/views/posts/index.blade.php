@@ -269,6 +269,7 @@
     <div class="row">
         <div class="col-md-12">
             <nav aria-label="Page navigation">
+<<<<<<< HEAD
                 <ul class="pagination justify-content-center">
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -277,6 +278,9 @@
                         <a class="page-link" href="#">Next</a>
                     </li>
                 </ul>
+=======
+                {{ $posts->links() }}
+>>>>>>> 05fc1cb (Added show posts)
             </nav>
         </div><!-- end col -->
     </div>
