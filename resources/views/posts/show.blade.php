@@ -3,6 +3,7 @@
 @section('title', 'Markedia - Marketing Blog Template :: ' . $post->title)
 
 @section('content')
+
     <div class="page-wrapper">
         <div class="blog-title-area">
             <ol class="breadcrumb hidden-xs-down">
@@ -19,16 +20,16 @@
             <h3>{{ $post->title }}</h3>
 
             <div class="blog-meta big-meta">
-                <small>{{ $post->getPostDate() }}</small></small>
-                <small><i class="fa fa-eye"></i>{{ $post->views }}</small>
+                <small>{{ $post->getPostDate() }}</small>
+                <small><i class="fa fa-eye"></i> {{ $post->views }}</small>
             </div><!-- end meta -->
 
             <div class="post-sharing">
                 <ul class="list-inline">
-                    <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i>
-                            <span class="down-mobile">Share on Facebook</span></a></li>
-                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i>
-                            <span class="down-mobile">Tweet on Twitter</span></a></li>
+                    <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span
+                                class="down-mobile">Share on Facebook</span></a></li>
+                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span
+                                class="down-mobile">Tweet on Twitter</span></a></li>
                     <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
                 </ul>
             </div><!-- end post-sharing -->
@@ -52,12 +53,13 @@
                     @endforeach
                 </div><!-- end meta -->
             @endif
+
             <div class="post-sharing">
                 <ul class="list-inline">
-                    <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i>
-                            <span class="down-mobile">Share on Facebook</span></a></li>
-                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i>
-                            <span class="down-mobile">Tweet on Twitter</span></a></li>
+                    <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span
+                                class="down-mobile">Share on Facebook</span></a></li>
+                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span
+                                class="down-mobile">Tweet on Twitter</span></a></li>
                     <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
                 </ul>
             </div><!-- end post-sharing -->
@@ -84,10 +86,10 @@
 
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
                     <h4><a href="#">Jessica</a></h4>
-                    <p>Quisque sed tristique felis. Lorem <a href="#">visit my website</a> amet,
-                        consectetur adipiscing elit. Phasellus quis mi auctor, tincidunt nisl eget,
-                        finibus odio. Duis tempus elit quis risus congue feugiat. Thanks for stop
-                        Markedia!</p>
+                    <p>Quisque sed tristique felis. Lorem <a href="#">visit my website</a> amet, consectetur
+                        adipiscing
+                        elit. Phasellus quis mi auctor, tincidunt nisl eget, finibus odio. Duis tempus elit quis risus
+                        congue feugiat. Thanks for stop Markedia!</p>
 
                     <div class="topsocial">
                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
@@ -124,11 +126,9 @@
                             </a>
                         </div><!-- end media -->
                         <div class="blog-meta">
-                            <h4><a href="marketing-single.html" title="">We are guests of ABC Design
-                                    Studio</a></h4>
+                            <h4><a href="marketing-single.html" title="">We are guests of ABC Design Studio</a></h4>
                             <small><a href="blog-category-01.html" title="">Trends</a></small>
-                            <small><a href="blog-category-01.html" title="">21 July,
-                                    2017</a></small>
+                            <small><a href="blog-category-01.html" title="">21 July, 2017</a></small>
                         </div><!-- end meta -->
                     </div><!-- end blog-box -->
                 </div><!-- end col -->
@@ -144,11 +144,9 @@
                             </a>
                         </div><!-- end media -->
                         <div class="blog-meta">
-                            <h4><a href="marketing-single.html" title="">Nostalgia at work with
-                                    family</a></h4>
+                            <h4><a href="marketing-single.html" title="">Nostalgia at work with family</a></h4>
                             <small><a href="blog-category-01.html" title="">News</a></small>
-                            <small><a href="blog-category-01.html" title="">20 July,
-                                    2017</a></small>
+                            <small><a href="blog-category-01.html" title="">20 July, 2017</a></small>
                         </div><!-- end meta -->
                     </div><!-- end blog-box -->
                 </div><!-- end col -->
@@ -167,14 +165,11 @@
                                 <img src="upload/author.jpg" alt="" class="rounded-circle">
                             </a>
                             <div class="media-body">
-                                <h4 class="media-heading user_name">Amanda Martines <small>5 days
-                                        ago</small></h4>
-                                <p>Exercitation photo booth stumptown tote bag Banksy, elit small
-                                    batch freegan sed. Craft beer elit seitan exercitation, photo
-                                    booth et 8-bit kale chips proident chillwave deep v laborum.
-                                    Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami
-                                    readymade swag. Selfies iPhone Kickstarter, drinking vinegar
-                                    jean.</p>
+                                <h4 class="media-heading user_name">Amanda Martines <small>5 days ago</small></h4>
+                                <p>Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed.
+                                    Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident
+                                    chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do
+                                    umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean.</p>
                                 <a href="#" class="btn btn-primary btn-sm">Reply</a>
                             </div>
                         </div>
@@ -184,13 +179,11 @@
                             </a>
                             <div class="media-body">
 
-                                <h4 class="media-heading user_name">Baltej Singh <small>5 days
-                                        ago</small></h4>
+                                <h4 class="media-heading user_name">Baltej Singh <small>5 days ago</small></h4>
 
-                                <p>Drinking vinegar stumptown yr pop-up artisan sunt. Deep v cliche
-                                    lomo biodiesel Neutra selfies. Shorts fixie consequat
-                                    flexitarian four loko tempor duis single-origin coffee. Banksy,
-                                    elit small.</p>
+                                <p>Drinking vinegar stumptown yr pop-up artisan sunt. Deep v cliche lomo biodiesel
+                                    Neutra selfies. Shorts fixie consequat flexitarian four loko tempor duis
+                                    single-origin coffee. Banksy, elit small.</p>
 
                                 <a href="#" class="btn btn-primary btn-sm">Reply</a>
                             </div>
@@ -201,12 +194,10 @@
                             </a>
                             <div class="media-body">
 
-                                <h4 class="media-heading user_name">Marie Johnson <small>5 days
-                                        ago</small></h4>
-                                <p>Kickstarter seitan retro. Drinking vinegar stumptown yr pop-up
-                                    artisan sunt. Deep v cliche lomo biodiesel Neutra selfies.
-                                    Shorts fixie consequat flexitarian four loko tempor duis
-                                    single-origin coffee. Banksy, elit small.</p>
+                                <h4 class="media-heading user_name">Marie Johnson <small>5 days ago</small></h4>
+                                <p>Kickstarter seitan retro. Drinking vinegar stumptown yr pop-up artisan sunt. Deep v
+                                    cliche lomo biodiesel Neutra selfies. Shorts fixie consequat flexitarian four loko
+                                    tempor duis single-origin coffee. Banksy, elit small.</p>
 
                                 <a href="#" class="btn btn-primary btn-sm">Reply</a>
                             </div>
@@ -232,5 +223,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end page-wrapper -->
+
 @endsection
+

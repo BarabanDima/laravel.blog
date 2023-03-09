@@ -28,7 +28,7 @@
                         role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/public" class="nav-link">Главная</a>
+                    <a href="{{ route('home') }}" class="nav-link">Главная</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="/admin/categories" class="nav-link">Категории</a>

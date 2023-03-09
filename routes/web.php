@@ -14,24 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PostController@index')->name('home');
-<<<<<<< HEAD
-<<<<<<< HEAD
-Route::get('/article', 'PostController@show')->name('posts.single');
-=======
 Route::get('/article/{slug}', 'PostController@show')->name('posts.single');
 Route::get('/category/{slug}', 'CategoryController@show')->name('categories.single');
 Route::get('/tag/{slug}', 'TagController@show')->name('tags.single');
->>>>>>> 05fc1cb (Added show posts)
-=======
-Route::get('/article/{slug}', 'PostController@show')->name('posts.single');
-Route::get('/category/{slug}', 'CategoryController@show')->name('categories.single');
->>>>>>> 728963c (Добавил вывод статей на главной странице)
 
-Route::prefix('admin')->group(function() {
-    Route::get('/', 'Admin\MainController@index')->name('admin.index')->middleware('admin');
-    Route::resource('/categories', 'Admin\CategoryController')->middleware('admin');
-    Route::resource('/tags', 'Admin\TagController')->middleware('admin');
-    Route::resource('/posts', 'Admin\PostController')->middleware('admin');
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
+    Route::get('/', 'MainController@index')->name('admin.index');
+    Route::resource('/categories', 'CategoryController');
+    Route::resource('/tags', 'TagController');
+    Route::resource('/posts', 'PostController');
 });
 
 Route::group(['middleware' => 'guest'], function () {
