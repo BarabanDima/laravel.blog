@@ -58,8 +58,7 @@
                                                             <i class="fas fa-pencil-alt"></i>
                                                         </a>
 
-                                                        <form
-                                                            action="{{ route('posts.destroy', ['post' => $post->id]) }}"
+                                                        <form action="{{ route('posts.destroy', ['post' => $post->id]) }}"
                                                             method="post" class="float-left">
                                                             @csrf
                                                             @method('DELETE')

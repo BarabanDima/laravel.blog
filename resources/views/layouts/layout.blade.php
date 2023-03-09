@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Markedia - Marketing Blog Template</title>
+<title>@yield('title')</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -27,7 +27,11 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <a class="navbar-brand" href="marketing-index.html"><img
+=======
+                    <a class="navbar-brand" href="{{ route('home') }}"><img
+>>>>>>> 728963c (Добавил вывод статей на главной странице)
                             src="public/assets/front/images/version/market-logo.png" alt=""></a>
 =======
                     <a class="navbar-brand" href="{{ route('home') }}"><img
