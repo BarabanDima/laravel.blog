@@ -11,24 +11,23 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="navbar-brand"b href="{{ route('home') }}">
-                                <img
-                                    src="/public/assets/front/images/version/market-logo.png"alt=""></a>
+                                <img src="/public/assets/front/images/version/market-logo.png"alt=""></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">Home</a>
+                            <a class="nav-link" href="{{ route('brands') }}">Бренды</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="{{ route('categories.single', ['slug' => 'marketing']) }}">Marketing</a>
+                            <a class="nav-link" href="{{ route('categories.single', ['slug' => 'news']) }}">Новости</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                href="{{ route('categories.single', ['slug' => 'make-money']) }}">Make Money</a>
-                        </li>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categories.single', ['slug' => 'lexus']) }}">Make
+                                Money</a>
+                        </li> --}}
                     </ul>
 
                     <form class="form-inline" method="GET" action="{{ route('search') }}">
-                        <input name="s" class="form-control mr-sm-2 is-invalid" type="text" placeholder="How may I help?">
+                        <input name="s" class="form-control mr-sm-2 is-invalid" type="text"
+                            placeholder="How may I help?">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
