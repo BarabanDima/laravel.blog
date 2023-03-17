@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Models\Comment;
 
 class PostController extends Controller
 {
@@ -18,6 +19,8 @@ class PostController extends Controller
         $post = Post::where('slug', $slug)->firstOrFail();
         $post->views += 1;
         $post->update();
-        return view('posts.show', compact('post'));
+        $comments = $post->comments()->orderBy('id', 'desc')->paginate(5);
+
+        return view('posts.show', compact('post', 'comments'));
     }
 }

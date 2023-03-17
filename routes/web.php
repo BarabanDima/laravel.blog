@@ -21,6 +21,9 @@ Route::get('/search', 'SearchController@index')->name('search');
 Route::get('/brands', function () {
     return view('brands.show');
 })->name('brands');
+Route::post('/posts/{postId}/comments', 'CommentController@store');
+
+
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'MainController@index')->name('admin.index');
