@@ -40,8 +40,8 @@ class Post extends Model
 
     public static function uploadImage(Request $request, $image = null)
     {
-        if($request->hasFile('thumbnail')) {
-            if($image) {
+        if ($request->hasFile('thumbnail')) {
+            if ($image) {
                 Storage::delete($image);
             }
             $folder = date('Y-m-d');
@@ -67,6 +67,4 @@ class Post extends Model
     {
         return $query->where('title', 'LIKE', "%{$s}%");
     }
-
 }
-

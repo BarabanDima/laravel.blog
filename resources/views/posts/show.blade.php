@@ -77,7 +77,7 @@
                                 <div class="media-body">
                                     <h4>{{ $comment->name }}</h4>
                                     <p><i>{{ $comment->comment }}</i></p>
-                                    <a href="#" class="btn btn-primary btn-sm">Reply</a>
+                                    <a href="#" class="btn btn-primary btn-sm">Ответить</a>
                                 </div>
                             </div>
                         @endforeach
